@@ -1,0 +1,20 @@
+	
+	<div style="background-color:green;margin:0 auto 20px;padding:20px;width:350px;border-radius:8px;text-align:center">
+		<h2>Login</h2>
+		<%= form_tag :url => sessions_url, :method => "post", :action => "create" do %> 
+		
+			<table align="center">
+				<tr><td align="left"><%= label_tag :username %></td></tr>
+				<tr><td><%= text_field_tag :username %></td></tr>
+			
+				<tr><td align="left"><%= label_tag :password %></td></tr>
+				<tr><td><%= text_field_tag :password %></td></tr>
+			</table>
+			
+			<%= submit_tag :Submit %>
+
+		<% end %>
+		<%= link_to "sign up", new_user_path %>
+
+	</div>
+
